@@ -31,7 +31,7 @@
   width: 100%;
   background-color: #ddd;
 }
-#myBar {
+#prog{
   width: 10%;
   height: 30px;
   background-color: blue;
@@ -39,7 +39,7 @@
   line-height: 30px; /* To center it vertically */
   color: white; 
 }
-  section{color:red}
+  
 </style>
   </head>
   <body>
@@ -142,7 +142,7 @@
                 <button onclick="move()" class="btn btn-common">More About Us</button>
               <h2>How safe is your IP </h2>
 <section id="myProgress">
-  <div id="myBar">10%</div>
+  <div id="prog">10%</div>
 </section>
 <button class="btn btn-secondary" onclick="move()">Click Me</button> 
               </div>
@@ -189,7 +189,8 @@
 
 function move() {
 
-  var elem = document.getElementById("myBar");   
+  var elem = document.getElementById("myBar");  
+  var x = document.querySelector("#prog");
 
   var width = 10;
 
@@ -205,9 +206,9 @@ function move() {
 
       width++; 
 
-      elem.style.width = width + '%'; 
+      x.style.width = width + '%'; 
 
-elem.innerHTML = width * 1  + '%';
+x.innerHTML = width * 1  + '%';
 
     }
 
