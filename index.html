@@ -207,24 +207,38 @@
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.min.js"></script>
       <script>
+
 function move() {
-  alert("Today's date is ");
+
   var elem = document.getElementById("myBar");   
+
   var width = 10;
-  var wid = Math.ceil(Math.random() * 100);
+
   var id = setInterval(frame, 10);
+
   function frame() {
-   
-    for(var i =0;i<wid;i++){
-    width++;
+
+    if (width >= 87) {
+
+      clearInterval(id);
+
+    } else {
+
+      width++; 
+
       elem.style.width = width + '%'; 
+
 elem.innerHTML = width * 1  + '%';
+
     }
-  
+
+  }
+
 }
-  clearInterval(id);
+
     
-}
+
 </script>
+    
   </body>
 </html>
