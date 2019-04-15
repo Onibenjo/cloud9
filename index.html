@@ -138,12 +138,12 @@
               <div>
                 <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s">We are helping to grow <br> your business.</h2>
                 <p class="mb-4">A digital studio specialising in User Experience & eCommerce, we combine innovation with digital craftsmanship to help brands fulfill their potential.</p>
-                <button href="#" onclick="move()" class="btn btn-common">More About Us</button>
+                <button onclick="move()" class="btn btn-common">More About Us</button>
               <h2>How safe is your IP </h2>
 <div id="myProgress">
   <div id="myBar">10%</div>
 </div>
-<button class="btn btn-secondary" onclick="move()">Click Me</button> 
+<button style="display: block" class="btn btn-secondary" onclick="move()">Click Me</button> 
               </div>
             </div>
           </div>
@@ -190,9 +190,10 @@
 function move() {
   var elem = document.getElementById("myBar");   
   var width = 10;
+  var wid = Math.ceil(Math.random() * 100);
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= 87) {
+    if (width >= wid) {
       clearInterval(id);
     } else {
       width++; 
